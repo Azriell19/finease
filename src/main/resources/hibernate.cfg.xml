@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="jakarta.persistence.jdbc.driver">com.mysql.cj.jdbc.Driver</property>
+        <property name="jakarta.persistence.jdbc.url">jdbc:mysql://localhost:3306/finease?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Asia/Jakarta&amp;characterEncoding=UTF-8</property>
+        <property name="jakarta.persistence.jdbc.user">root</property>
+        <property name="jakarta.persistence.jdbc.password"></property>
+
+        <property name="hibernate.connection.pool_size">5</property>
+        <property name="hibernate.hbm2ddl.auto">none</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping class="com.finease.entity.Account"/>
+        <mapping class="com.finease.entity.Journal"/>
+        <mapping class="com.finease.entity.JournalLine"/>
+
+    </session-factory>
+</hibernate-configuration>
